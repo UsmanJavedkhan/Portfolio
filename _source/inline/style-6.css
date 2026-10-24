@@ -1,0 +1,102 @@
+﻿/* Menu time block */
+.menu-localtime{
+  text-align:right;          /* you said right aligned */
+  white-space:nowrap;        /* keeps time and GMT together */
+}
+
+/* spacing before GMT label */
+.menu-localtime .menu-gmt{
+  margin-left:8px;
+  letter-spacing:-0.5px;     /* matches your screenshot setting */
+}
+
+/* optional: align vertically with other menu items */
+.menu-localtime,
+.menu-localtime span{
+  line-height:1.4;           /* matches your setting */
+  font-size:12px;
+}
+
+
+
+
+/* ===========================
+   Bottom Fixed Navbar
+   =========================== */
+
+/* Desktop + Tablet (â‰¥642px): pin to bottom */
+@media (min-width: 642px){
+  .bottom-fixed-nav{
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--nav-bottom, 24px) + env(safe-area-inset-bottom));
+    z-index: 9999;
+    margin: 0 !important;
+    width: 100% !important;
+    display: block !important; /* force visible */
+  }
+
+  /* Prevent content overlap (reserve space equal to nav height) */
+  #main{
+    padding-bottom: var(--nav-reserved, 88px);
+  }
+}
+
+/* Mobile (â‰¤641px): hide this nav, use mobile one */
+@media (max-width: 641px){
+  .bottom-fixed-nav{
+    position: static !important;
+    left: auto; right: auto; bottom: auto;
+    display: none !important;
+  }
+}
+
+/* Kill Avada's sticky spacer that creates unwanted gaps */
+.fusion-sticky-spacer{
+  display:none !important;
+  height:0 !important;
+}
+
+
+/* ===========================
+   Responsive Navbar Padding
+   =========================== */
+
+/* Default for very large screens (1920px and up) */
+.main-navbar-inside {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+/* Screens up to 1600px */
+@media (max-width: 1600px) {
+  .main-navbar-inside {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
+/* Screens up to 1400px */
+@media (max-width: 1400px) {
+  .main-navbar-inside {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+/* Screens up to 1200px */
+@media (max-width: 1200px) {
+  .main-navbar-inside {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+/* Screens up to 1000px */
+@media (max-width: 1000px) {
+  .main-navbar-inside {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

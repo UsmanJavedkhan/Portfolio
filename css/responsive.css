@@ -1,0 +1,216 @@
+/* ==========================================================================
+   responsive.css
+   Breakpoints match the original build: 640 / 641–999 / 1000+,
+   plus the wide-screen padding ladder recovered from the custom CSS.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Wide-screen ladder for the hero wordmark (recovered verbatim)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1000px) and (max-width: 1299px) {
+  .intro-hero { padding-top: 40px; }
+}
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .intro-hero { padding-top: 30px; }
+}
+@media (min-width: 1401px) and (max-width: 1599px) {
+  .intro-hero { padding-inline: 6%; padding-top: 20px; }
+}
+@media (min-width: 1800px) and (max-width: 1869px) {
+  .intro-hero { padding-top: 15px; }
+}
+@media (min-width: 1870px) {
+  .intro-hero { padding-inline: 4%; }
+}
+@media (min-width: 1921px) and (max-width: 2559px) {
+  .intro-hero { padding-inline: 8%; }
+}
+@media (min-width: 2560px) and (max-width: 3199px) {
+  .intro-hero { padding-inline: 15%; }
+}
+@media (min-width: 3200px) and (max-width: 3839px) {
+  .intro-hero { padding-inline: 20%; }
+}
+@media (min-width: 3840px) {
+  .intro-hero { padding-inline: 25%; }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet — up to 999px
+   Native scrolling only (Lenis is torn down below 1000px, as in the original)
+   -------------------------------------------------------------------------- */
+@media (max-width: 999px) {
+  html { scroll-behavior: auto !important; }
+
+  :root {
+    --fs-h3: 36px;
+    --fs-h3-lg: 44px;
+    --fs-skill: 30px;
+    --fs-giant: 96px;
+  }
+
+  .section--pad,
+  .skills,
+  .awards,
+  .portfolio,
+  .experience,
+  .testimonials,
+  .faq,
+  .contact { padding-block: 64px; }
+
+  .skills { padding-block: 80px 64px; }
+
+  /* Hero stacks and the card sits under the wordmark */
+  .hero { min-height: auto; padding-block: 120px 60px; }
+  .hero-inner { padding-top: 0; }
+
+  .intro-hero {
+    position: static !important;
+    padding-inline: 0;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  .intro-hero .hero-left,
+  .intro-hero .hero-right {
+    flex: 1 1 auto;
+    max-width: none;
+    text-align: center;
+  }
+  .intro-hero .hero-eyebrow { margin-bottom: 8px; }
+
+  .card-pin { margin: 40px auto 0; }
+
+  /* Deck goes full width; cards stop sticking so they read as a plain list */
+  .skill-list { width: 100%; padding-inline: 0; margin-top: 56px; }
+  .skill {
+    position: static;
+    margin-bottom: 24px;
+    padding: 30px 26px;
+    border-radius: 28px;
+    box-shadow: 2px 2px 40px 16px var(--c1);
+    transform: none;
+  }
+  .skill:hover { transform: none; }
+  .skill__tools { padding-left: 24px; }
+
+  .award { grid-template-columns: 1fr auto; gap: 8px 20px; }
+  .award__date { grid-column: 1 / -1; text-align: left; }
+
+  .portfolio__grid { grid-template-columns: 1fr; }
+  .portfolio__cta { flex-direction: column; align-items: flex-start; text-align: left; }
+
+  .job { grid-template-columns: 1fr auto; }
+  .job__company { grid-column: 1 / -1; text-align: left; }
+
+  .contact__panel { grid-template-columns: 1fr; }
+  .contact__form,
+  .contact__aside { padding: 30px; }
+
+  .footer-marquee .marquee__group span { font-size: 40px; }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — up to 640px
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root {
+    --fs-h3: 30px;
+    --fs-h3-lg: 34px;
+    --fs-skill: 26px;
+    --fs-giant: 56px;
+  }
+
+  .row { padding-inline: 18px; }
+
+  .site-header { padding: 18px 18px; }
+
+  /* Bottom nav becomes a compact full-width pill */
+  .main-bottom-nav {
+    bottom: 14px;
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    justify-content: space-around;
+    gap: 2px;
+    padding: 4px;
+  }
+  .menu-btn--link { padding: 9px 8px; font-size: 13px; }
+  .menu-btn--cta  { padding: 9px 12px; font-size: 14px; }
+  .menu-btn--icon { width: 36px; height: 36px; padding: 8px; font-size: 17px; }
+
+  /* Blur strip is hidden below 1000px (matches the original's minWidth guard) */
+  #nik-bottom-blur { display: none !important; }
+
+  .hero { padding-block: 100px 40px; }
+  .card-pin {
+    width: 220px;
+    height: 310px;
+    margin: 32px auto 0;
+  }
+
+  .skill__tools li { font-size: 13px; }
+
+  .award { grid-template-columns: 1fr; }
+  .award__org { font-size: 16px; }
+  .award__title { font-size: 20px; letter-spacing: -1px; }
+
+  .portfolio__cta { padding: 24px; }
+  .portfolio__cta-title { font-size: 26px; }
+
+  .job { grid-template-columns: 1fr; gap: 6px; }
+  .job__role { font-size: 19px; }
+
+  .tst-card { width: 280px; padding: 22px; }
+
+  .contact__form { grid-template-columns: 1fr; padding: 24px; }
+  .contact__aside { padding: 24px; }
+
+  .footer-marquee .marquee__group span { font-size: 28px; padding-inline: 10px; }
+  .footer-contact a { font-size: 17px; }
+  .footer-bottom { justify-content: center; text-align: center; }
+
+  .oc-panel { width: 100vw; padding: 28px; }
+  .oc-nav a { font-size: 22px; }
+
+  /* Preloader type scaling (recovered verbatim) */
+  #custom-preloader .preloader-title { text-align: center; }
+  #custom-preloader .preloader-title .preloader-line { display: block; }
+  #custom-preloader .preloader-title .preloader-line-1 {
+    font-size: clamp(22px, 7vw, 30px);
+    margin-top: 6px;
+  }
+  #custom-preloader .preloader-title .preloader-line-2 {
+    font-size: clamp(16px, 5.5vw, 22px);
+    margin-top: 2px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion (recovered verbatim, extended to the rest of the page)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  #custom-preloader,
+  #custom-preloader * {
+    animation: none !important;
+    transition: none !important;
+  }
+  #custom-preloader .preloader-emoji,
+  #custom-preloader .preloader-title .preloader-line span {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .marquee__track,
+  .tst-track { animation: none !important; }
+
+  .reveal { opacity: 1 !important; filter: none !important; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

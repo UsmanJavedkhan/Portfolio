@@ -1,0 +1,114 @@
+﻿/* class is on the accordion wrapper itself */
+.fusion-accordian.faq-style .fusion-panel {
+  border-radius: 20px;
+}
+
+
+
+
+#custom-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: all;
+}
+
+#custom-preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#custom-preloader-text span {
+  opacity: 0;
+  transform: translateY(20px);
+  display: inline-block;
+  animation: riseUpFade 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes riseUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.faded-cards {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stronger fade overlay */
+.faded-cards::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px; /* adjust as needed */
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(234, 234, 234, 0) 30%, #eaeaea 100%);
+  z-index: 10;
+}
+
+
+
+.my-time-style {
+  font-family: General Sans - Regular, sans-serif;
+  font-size: 16px;
+  color: #6d6d6d;
+
+  /* align right inside parent column */
+  text-align: right;
+
+  /* if needed, make it full width of the column */
+  width: 100%;
+}
+
+
+
+/* Phone-only version */
+.my-time-style-phone {
+  font-family: General Sans - Regular, sans-serif;
+  font-size: 16px;
+  color: #6d6d6d;
+  text-align: right;
+  width: 100%;
+
+  /* kill unexpected spacing */
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2;
+}
+
+/* show phone version only on small screens, hide desktop one */
+@media (max-width: 767px) {
+  .my-time-style { display: none !important; }
+  .my-time-style-phone { display: block !important; }
+}
+
+
+.homepage-localtime {
+  font-family: "General Sans - Regular", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #6d6d6d;
+  text-transform: none;
+  white-space: nowrap;
+  text-align: right;
+}

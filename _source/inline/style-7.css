@@ -1,0 +1,11 @@
+﻿.fullwidth-text {
+  font-size: 22vw;       /* Adjust this value up or down */
+  width: 100vw;          /* Span entire viewport width */
+  white-space: nowrap;   /* Prevent wrapping to next line */
+  text-align: center;    /* Center the text */
+  margin: 0;             /* Remove any extra spacing */
+  padding: 0;
+  white-space: nowrap;  /* Prevents text from breaking to next line */
+  overflow: hidden;     /* Optional: hide overflow if needed */
+
+}

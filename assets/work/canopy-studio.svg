@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" role="img" aria-label="CANOPY Studio">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ededed"/>
+  </linearGradient></defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+  <circle cx="1050" cy="170" r="230" fill="#e27500" opacity="0.06"/>
+  <text x="90" y="150" font-family="Segoe UI,system-ui,sans-serif" font-size="26" font-weight="600" fill="#e27500">01</text>
+  <line x1="90" y1="182" x2="268" y2="182" stroke="#e27500" stroke-width="3"/>
+  <text x="90" y="392" font-family="Segoe UI,system-ui,sans-serif" font-size="82" font-weight="600" fill="#333333" letter-spacing="-2.5">CANOPY Studio</text>
+  <text x="90" y="466" font-family="Segoe UI,system-ui,sans-serif" font-size="29" fill="#6d6d6d">Architecture studio site with horizontal-scroll project strips</text>
+  <g><rect x="90" y="648" rx="22" ry="22" width="114" height="44" fill="none" stroke="#c9c9c9" stroke-width="1.5"/><text x="147" y="676" text-anchor="middle" font-family="Segoe UI,system-ui,sans-serif" font-size="19" fill="#6d6d6d">React</text></g><g><rect x="218" y="648" rx="22" ry="22" width="154" height="44" fill="none" stroke="#c9c9c9" stroke-width="1.5"/><text x="295" y="676" text-anchor="middle" font-family="Segoe UI,system-ui,sans-serif" font-size="19" fill="#6d6d6d">Tailwind</text></g><g><rect x="386" y="648" rx="22" ry="22" width="208" height="44" fill="none" stroke="#c9c9c9" stroke-width="1.5"/><text x="490" y="676" text-anchor="middle" font-family="Segoe UI,system-ui,sans-serif" font-size="19" fill="#6d6d6d">React Router</text></g>
+</svg>
